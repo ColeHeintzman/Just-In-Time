@@ -14,7 +14,6 @@ $(document).ready(function() {
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, text);
-    localStorage.getItem("value");
     })
 })
 //*Recalling local storage for data persistence after refresh browser
@@ -26,28 +25,23 @@ $("#1200 .description").val(localStorage.getItem("1200"));
 $("#1300 .description").val(localStorage.getItem("1300"));
 $("#1400 .description").val(localStorage.getItem("1400"));
 $("#1500 .description").val(localStorage.getItem("1500"));
-$("#2100 .description").val(localStorage.getItem("2100"));
-$("#2200 .description").val(localStorage.getItem("2200"));
+$("#1600 .description").val(localStorage.getItem("1600"));
+$("#1700 .description").val(localStorage.getItem("1700"));
 //*Updating Schedule css based on current time
-function timeClock() {
+function formatRows() {
     $(".time-block").each(function() {
-        var currentHour = moment().hour();
-        var scheduleTime = parseInt($(this).attr("id").split("hour")[1]);
-        if (scheduleTime < currentHour) {
-            $(this).removeClass("future");
-            $(this).removeClass("present");
+        var scheduleTime = Array.from(document.getElementsByTagName('section'));
+        console.log(scheduleTime);
+        if (scheduleTime < currentTime) {
             $(this).addClass("past");
         }
-        else if (scheduleTime === currentHour) {
-            $(this).removeClass("future");
-            $(this).removeClass("past");
+        else if (scheduleTime === currentTime) {
             $(this).addClass("present");
         }
         else {
-            $(this).removeClass("present");
-            $(this).removeClass("past");
             $(this).addClass("future");
         }
     })
 }
-timeClock();
+
+formatRows();
