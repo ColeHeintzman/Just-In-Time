@@ -27,14 +27,14 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
         <div class="row justify-content-md-center time-block" id="0800">
-          <div class="col col-lg-1 hour">
-           08:00</div>
-            <textarea class="col-md-auto description"></textarea>
-            <button class="col col-lg-1 saveBtn"><i class="fas fa-save"></i></button>
+          <div class="col col-lg-1 hour">08:00</div>
+          <textarea class="col-md-auto description"></textarea>
+          <button class="col col-lg-1 saveBtn"><i class="fas fa-save"></i></button>
         </div>
         <div class="row justify-content-md-center time-block" id="0900">
           <div class="col col-lg-1 hour">09:00</div>
@@ -71,16 +71,17 @@
           <textarea class="col-md-auto description"></textarea>
           <button class="col col-lg-1 saveBtn"><i class="fas fa-save"></i></button>
         </div>
-      <div class="row justify-content-md-center time-block" id="1600">
-        <div class="col col-lg-1 hour">16:00</div>
+      <div class="row justify-content-md-center time-block" id="2100">
+        <div class="col col-lg-1 hour">21:00</div>
         <textarea class="col-md-auto description"></textarea>
         <button class="col col-lg-1 saveBtn"><i class="fas fa-save"></i></button>
       </div>
-      <div class="row justify-content-md-center time-block" id="1700">
-        <div class="col col-lg-1 hour">17:00</div>
+      <div class="row justify-content-md-center time-block" id="2200">
+        <div class="col col-lg-1 hour">22:00</div>
         <textarea class="col-md-auto description"></textarea>
         <button class="col col-lg-1 saveBtn"><i class="fas fa-save"></i></button>
       </div>
+<!--sources-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="Assets/script.js"></script>
